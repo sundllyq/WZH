@@ -24,34 +24,39 @@ def getDrawLine(input_time_path,input_stream_path):
 
 if __name__ == '__main__':
 
-    t1_path,d1_path = '../20191025/data/a1.txt', '../20191025/data/b1.txt'
-    t1,d1 = getDrawLine(t1_path,d1_path)
-
-    t2_path,d2_path = '../20191025/data/a2.txt', '../20191025/data/b2.txt'
-    t2,d2 = getDrawLine(t2_path,d2_path)
-
-    plt.plot(t1,range(0,len(d1)),color="k",label='follow1',linestyle="-")
-    plt.plot(t2,range(0,len(d2)),color='k',label='follow2',linestyle=":")
-
-    plt.xlabel("Trigger times")
-    plt.ylabel("Trigger intervals")
-    plt.legend()
-    plt.show()
-
-
-    # t1_path,d1_path = '../20191025/data/aa1.txt', '../20191025/data/b1.txt'
+    # t1_path,d1_path = '../20191025/data/a1.txt', '../20191025/data/b1.txt'
     # t1,d1 = getDrawLine(t1_path,d1_path)
     #
     # t2_path,d2_path = '../20191025/data/a2.txt', '../20191025/data/b2.txt'
     # t2,d2 = getDrawLine(t2_path,d2_path)
+
+    t1_path,d1_path = '../20191025/data/aa1.txt', '../20191025/data/bb1.txt'
+    t1,d1 = getDrawLine(t1_path,d1_path)
+
+    t2_path,d2_path = '../20191025/data/aa2.txt', '../20191025/data/bb2.txt'
+    t2,d2 = getDrawLine(t2_path,d2_path)
     #
-    # plt.plot(t1,range(0,len(d1)),color="#8dd3c7",label='follow1')
-    # plt.plot(t2,range(0,len(d2)),color='#8dd3c5',label='follow2')
+    plt.plot(t1,range(0,len(d1)),color="k",label='follow1',linestyle="-")
+    plt.scatter(t1, range(0,len(d1)), marker='o', color='k', s=4)
+    plt.plot(t2,range(0,len(d2)),color='k',label='follow2',linestyle=":")
+    plt.scatter(t2, range(0,len(d2)), marker='o', color='k', s=4, label='trigger points')
+
+    plt.xlabel("Trigger times")
+    plt.ylabel("Trigger intervals")
+    plt.legend()
+    # plt.show()
+    # plt.savefig('../20191025/pic/p1.eps')
+    plt.savefig('../20191025/pic/p2.eps')
+
+
+
+    # plt.plot(t1,range(0,len(d1)),color="k",label='follow1',linestyle="-",marker='.')
+    # plt.plot(t2,range(0,len(d2)),color='k',label='follow2',linestyle=":",marker='.')
     #
-    # plt.ylabel("Trigger times")
+    # plt.ylabel("Trigger points")
     # plt.xlabel("Trigger intervals")
     # plt.legend()
-    # plt.show()
+    # plt.savefig('../20191025/pic/p2.eps')
 
 
 
