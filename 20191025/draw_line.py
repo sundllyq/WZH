@@ -36,17 +36,24 @@ if __name__ == '__main__':
     t2_path,d2_path = '../20191025/data/aa2.txt', '../20191025/data/bb2.txt'
     t2,d2 = getDrawLine(t2_path,d2_path)
     #
-    plt.plot(t1,range(0,len(d1)),color="k",label='follow1',linestyle="-")
+
+    plt.figure(figsize=(10, 10))
+    plt.plot(t1,range(0,len(d1)),color="k",label='follower1',linestyle="-")
     plt.scatter(t1, range(0,len(d1)), marker='o', color='k', s=4)
-    plt.plot(t2,range(0,len(d2)),color='k',label='follow2',linestyle=":")
+    plt.plot(t2,range(0,len(d2)),color='k',label='follower2',linestyle=":")
     plt.scatter(t2, range(0,len(d2)), marker='o', color='k', s=4, label='trigger points')
 
-    plt.xlabel("Trigger times")
-    plt.ylabel("Trigger intervals")
-    plt.legend()
-    # plt.show()
+    font = {'family': 'Times New Roman', 'weight': 'normal', 'size': 25}
+    plt.xlabel("Trigger times", fontsize=25,prop=font)
+    plt.ylabel("Trigger intervals",fontsize=25,prop=font)
+
+
+    plt.legend(prop=font)
+    plt.xticks(range(0,16,4),fontsize=25)
+    plt.yticks(range(0,175,50),fontsize=25)
+    plt.show()
     # plt.savefig('../20191025/pic/p1.eps')
-    plt.savefig('../20191025/pic/p2.eps')
+    #plt.savefig('../20191025/pic/p2.eps')
 
 
 
