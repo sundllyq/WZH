@@ -24,17 +24,17 @@ def getDrawLine(input_time_path,input_stream_path):
 
 if __name__ == '__main__':
 
-    # t1_path,d1_path = '../20191025/data/a1.txt', '../20191025/data/b1.txt'
-    # t1,d1 = getDrawLine(t1_path,d1_path)
-    #
-    # t2_path,d2_path = '../20191025/data/a2.txt', '../20191025/data/b2.txt'
-    # t2,d2 = getDrawLine(t2_path,d2_path)
-
-    t1_path,d1_path = '../20191025/data/aa1.txt', '../20191025/data/bb1.txt'
+    t1_path,d1_path = '../20191025/data/a1.txt', '../20191025/data/b1.txt'
     t1,d1 = getDrawLine(t1_path,d1_path)
 
-    t2_path,d2_path = '../20191025/data/aa2.txt', '../20191025/data/bb2.txt'
+    t2_path,d2_path = '../20191025/data/a2.txt', '../20191025/data/b2.txt'
     t2,d2 = getDrawLine(t2_path,d2_path)
+
+    # t1_path,d1_path = '../20191025/data/aa1.txt', '../20191025/data/bb1.txt'
+    # t1,d1 = getDrawLine(t1_path,d1_path)
+    #
+    # t2_path,d2_path = '../20191025/data/aa2.txt', '../20191025/data/bb2.txt'
+    # t2,d2 = getDrawLine(t2_path,d2_path)
     #
 
     plt.figure(figsize=(10, 10))
@@ -43,17 +43,19 @@ if __name__ == '__main__':
     plt.plot(t2,range(0,len(d2)),color='k',label='follower2',linestyle=":")
     plt.scatter(t2, range(0,len(d2)), marker='o', color='k', s=4, label='trigger points')
 
-    font = {'family': 'Times New Roman', 'weight': 'normal', 'size': 25}
-    plt.xlabel("Trigger times", fontsize=25,prop=font)
-    plt.ylabel("Trigger intervals",fontsize=25,prop=font)
+    fontsize = 35
+    font = {'family': 'Times New Roman', 'weight': 'normal', 'size': fontsize}
+    plt.xlabel("Trigger times", font)
+    plt.ylabel("Trigger intervals",font)
 
 
     plt.legend(prop=font)
-    plt.xticks(range(0,16,4),fontsize=25)
-    plt.yticks(range(0,175,50),fontsize=25)
-    plt.show()
-    # plt.savefig('../20191025/pic/p1.eps')
-    #plt.savefig('../20191025/pic/p2.eps')
+    plt.tick_params(font)
+    plt.xticks(range(0,18,4),fontsize=fontsize)
+    plt.yticks(range(0,175,40),fontsize=fontsize)
+
+    plt.savefig('../20191025/pic/p1.eps')
+    # plt.savefig('../20191025/pic/p2.eps')
 
 
 
