@@ -24,38 +24,48 @@ def getDrawLine(input_time_path,input_stream_path):
 
 if __name__ == '__main__':
 
-    t1_path,d1_path = '../20191025/data/a1.txt', '../20191025/data/b1.txt'
-    t1,d1 = getDrawLine(t1_path,d1_path)
-
-    t2_path,d2_path = '../20191025/data/a2.txt', '../20191025/data/b2.txt'
-    t2,d2 = getDrawLine(t2_path,d2_path)
-
-    # t1_path,d1_path = '../20191025/data/aa1.txt', '../20191025/data/bb1.txt'
+    # t1_path,d1_path = '../20191025/data/a1.txt', '../20191025/data/b1.txt'
     # t1,d1 = getDrawLine(t1_path,d1_path)
     #
-    # t2_path,d2_path = '../20191025/data/aa2.txt', '../20191025/data/bb2.txt'
+    # t2_path,d2_path = '../20191025/data/a2.txt', '../20191025/data/b2.txt'
     # t2,d2 = getDrawLine(t2_path,d2_path)
-    #
 
-    plt.figure(figsize=(10, 10))
+    t1_path,d1_path = '../20191025/data/aa1.txt', '../20191025/data/bb1.txt'
+    t1,d1 = getDrawLine(t1_path,d1_path)
+
+    t2_path,d2_path = '../20191025/data/aa2.txt', '../20191025/data/bb2.txt'
+    t2,d2 = getDrawLine(t2_path,d2_path)
+
+
+    figsize = 15, 14
+    figure, ax = plt.subplots(figsize=figsize)
     plt.plot(t1,range(0,len(d1)),color="k",label='follower1',linestyle="-")
     plt.scatter(t1, range(0,len(d1)), marker='o', color='k', s=4)
     plt.plot(t2,range(0,len(d2)),color='k',label='follower2',linestyle=":")
     plt.scatter(t2, range(0,len(d2)), marker='o', color='k', s=4, label='trigger points')
 
-    fontsize = 35
-    font = {'family': 'Times New Roman', 'weight': 'normal', 'size': fontsize}
+    fontsize = 50
+    font = {'family': 'Times New Roman', 'weight': 'normal', 'size': fontsize, 'style':"normal"}
     plt.xlabel("Trigger times", font)
     plt.ylabel("Trigger intervals",font)
 
 
-    plt.legend(prop=font)
-    plt.tick_params(font)
-    plt.xticks(range(0,18,4),fontsize=fontsize)
-    plt.yticks(range(0,175,40),fontsize=fontsize)
+    plt.legend(prop=font, loc=4)
+    labels = ax.get_xticklabels() + ax.get_yticklabels()
+    [label.set_fontname('Times New Roman') for label in labels]
 
-    plt.savefig('../20191025/pic/p1.eps')
-    # plt.savefig('../20191025/pic/p2.eps')
+    # plt.xticks(range(0,16,3), fontsize=fontsize)
+    # plt.yticks(range(0,400,50),fontsize=fontsize)
+
+
+    #plt.show()
+    # plt.savefig('../20191025/pic/p1.eps')
+
+    plt.xticks(range(0,15,3), fontsize=fontsize)
+    plt.yticks(range(0,200,40),fontsize=fontsize)
+
+    plt.show()
+    #plt.savefig('../20191025/pic/p2.eps')
 
 
 
