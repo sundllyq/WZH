@@ -24,6 +24,14 @@ def getDrawLine(input_time_path,input_stream_path):
 
 if __name__ == '__main__':
 
+    # plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+    # plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+
+
+    # plt.rcParams['font.family'] = 'sans-serif'
+    # plt.rcParams['font.sans-serif'] = ['SimHei']
+    plt.rcParams['font.sans-serif'] = 'simsun'
+    plt.rcParams['axes.unicode_minus'] = False
 
     # t1_path,d1_path = '../20191025/data_new/agent11_time.txt', '../20191025/data_new/agent11_data.txt'
     # t1,d1 = getDrawLine(t1_path,d1_path)
@@ -37,27 +45,27 @@ if __name__ == '__main__':
     t2_path,d2_path = '../20191025/data_new/agent2_time.txt', '../20191025/data_new/agent2_data.txt'
     t2,d2 = getDrawLine(t2_path,d2_path)
 
-    figsize = 50, 39
+    figsize = 6, 5
     figure, ax = plt.subplots(figsize=figsize)
-    plt.scatter(t1,range(0,len(d1)),color="r",label='follower1',linestyle="-")
-    plt.scatter(t2,range(0,len(d2)),color='b',label='follower2',linestyle=":")
+    plt.scatter(t1,range(0,len(d1)),color="r",label='跟随者1',linestyle="-")
+    plt.scatter(t2,range(0,len(d2)),color='b',label='跟随者2',linestyle=":")
 
-    fontsize = 180
-    font = {'family': 'Times New Roman', 'weight': 'normal', 'size': fontsize, 'style':"normal"}
-    plt.xlabel("Time(s)", font)
-    plt.ylabel("Trigger times",font)
+    fontsize = 16
+    font = {'weight': 'normal', 'size': fontsize, 'style': "normal"}
+    plt.xlabel("t/s", font)
+    plt.ylabel("触发次数",font)
     plt.legend(prop=font, loc=4)
 
 
     labels = ax.get_xticklabels() + ax.get_yticklabels()
     [label.set_fontname('Times New Roman') for label in labels]
 
-    plt.xticks(range(0,33,10), fontsize=fontsize)
-    plt.yticks(range(0,200,40),fontsize=fontsize)
+    plt.xticks(range(0,33,10), fontsize=16)
+    plt.yticks(range(0,200,40),fontsize=16)
 
 
-    plt.savefig('../20191025/pic/p5.eps')
-    #plt.show()
+    plt.savefig('p15.png', dpi = 500)
+    # plt.show()
 
 
 

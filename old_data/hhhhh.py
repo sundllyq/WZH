@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import axes3d, Axes3D
 import codecs
 
+plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
+plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
+
 with codecs.open('/Users/liyingqi/Desktop/wzh/v1.txt','r') as f:
     leader1_x= f.readlines()
     leader1_x= [float(item.strip()) for item in leader1_x]
@@ -170,7 +173,7 @@ f_1, =ax.plot(flower1_x,flower1_y,flower1_t,color='b',linewidth=0.2)
 f_2, =ax.plot(flower2_x,flower2_y,flower2_t,color='c',linewidth=0.2)
 f_3, =ax.plot(flower3_x,flower3_y,flower3_t,color='salmon',linewidth=0.2)
 f_4, =ax.plot(flower4_x,flower4_y,flower4_t,color='cadetblue',linewidth=0.2)
-ax.legend([leader_1, leader_2, leader_3, f_1, f_2, f_3,f_4], ['leader1','leader2','leader3','follower1','follower2','follower3','follower4'], bbox_to_anchor=(0.71, 0.8))
+ax.legend([leader_1, leader_2, leader_3, f_1, f_2, f_3,f_4], ['领航者1','领航者2','领航者3','跟随者1','跟随者2','跟随者3','跟随者4'], bbox_to_anchor=(0.71, 0.8))
 
 
 ax.scatter(flower1_x[0],flower1_y[0],flower1_t[0],color='b',marker='x')
@@ -188,10 +191,11 @@ ax.scatter(flower2_x[-1],flower2_y[-1],flower2_t[-1],color='c',marker='x')
 ax.scatter(flower3_x[-1],flower3_y[-1],flower3_t[-1],color='salmon',marker='x')
 ax.scatter(flower4_x[-1],flower4_y[-1],flower4_t[-1],color='cadetblue',marker='x')
 
-ax.set_xlabel('$q_{ix}(km)$')
-ax.set_ylabel('$q_{iy}(km)$')
-ax.set_zlabel('$q_{iz}(km)$',)
+ax.set_xlabel('$q_{ix}$')
+ax.set_ylabel('$q_{iy}$')
+ax.set_zlabel('$q_{iz}$',)
 
 ax.view_init(elev=30., azim=40)
 
-plt.savefig('./zh.eps')
+# plt.show()
+plt.savefig('./31d.pdf')
