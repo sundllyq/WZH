@@ -5,94 +5,94 @@ import codecs
 plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/v1.txt','r') as f:
+with codecs.open('v1.txt','r') as f:
     leader1_x= f.readlines()
     leader1_x= [float(item.strip()) for item in leader1_x]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/v2.txt', 'r') as f:
+with codecs.open('v2.txt', 'r') as f:
     leader1_y = f.readlines()
     leader1_y = [float(item.strip()) for item in leader1_y]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/vt1.txt', 'r') as f:
+with codecs.open('vt1.txt', 'r') as f:
     leader1_t = f.readlines()
     leader1_t = [float(item.strip()) for item in leader1_t]
 
 ###2
-with codecs.open('/Users/liyingqi/Desktop/wzh/vv1.txt','r') as f:
+with codecs.open('vv1.txt','r') as f:
     leader2_x= f.readlines()
     leader2_x= [float(item.strip()) for item in leader2_x]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/vv2.txt', 'r') as f:
+with codecs.open('vv2.txt', 'r') as f:
     leader2_y = f.readlines()
     leader2_y = [float(item.strip()) for item in leader2_y]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/vvt1.txt', 'r') as f:
+with codecs.open('vvt1.txt', 'r') as f:
     leader2_t = f.readlines()
     leader2_t = [float(item.strip()) for item in leader2_t]
 
 ###3
-with codecs.open('/Users/liyingqi/Desktop/wzh/vvv1.txt','r') as f:
+with codecs.open('vvv1.txt','r') as f:
     leader3_x= f.readlines()
     leader3_x= [float(item.strip()) for item in leader3_x]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/vvv2.txt', 'r') as f:
+with codecs.open('vvv2.txt', 'r') as f:
     leader3_y = f.readlines()
     leader3_y = [float(item.strip()) for item in leader3_y]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/vvvt1.txt', 'r') as f:
+with codecs.open('vvvt1.txt', 'r') as f:
     leader3_t = f.readlines()
     leader3_t = [float(item.strip()) for item in leader3_t]
 
 
 ###f1
-with codecs.open('/Users/liyingqi/Desktop/wzh/x1.txt','r') as f:
+with codecs.open('x1.txt','r') as f:
     flower1_x= f.readlines()
     flower1_x= [float(item.strip()) for item in flower1_x]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/x2.txt', 'r') as f:
+with codecs.open('x2.txt', 'r') as f:
     flower1_y = f.readlines()
     flower1_y = [float(item.strip()) for item in flower1_y]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/1xt1.txt', 'r') as f:
+with codecs.open('1xt1.txt', 'r') as f:
     flower1_t = f.readlines()
     flower1_t = [float(item.strip()) for item in flower1_t]
 
 ###f2
-with codecs.open('/Users/liyingqi/Desktop/wzh/x3.txt','r') as f:
+with codecs.open('x3.txt','r') as f:
     flower2_x= f.readlines()
     flower2_x= [float(item.strip()) for item in flower2_x]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/x4.txt', 'r') as f:
+with codecs.open('x4.txt', 'r') as f:
     flower2_y = f.readlines()
     flower2_y = [float(item.strip()) for item in flower2_y]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/2xt1.txt', 'r') as f:
+with codecs.open('2xt1.txt', 'r') as f:
     flower2_t = f.readlines()
     flower2_t = [float(item.strip()) for item in flower2_t]
 
 ###f3
-with codecs.open('/Users/liyingqi/Desktop/wzh/x5.txt','r') as f:
+with codecs.open('x5.txt','r') as f:
     flower3_x= f.readlines()
     flower3_x= [float(item.strip()) for item in flower3_x]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/x6.txt', 'r') as f:
+with codecs.open('x6.txt', 'r') as f:
     flower3_y = f.readlines()
     flower3_y = [float(item.strip()) for item in flower3_y]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/3xt1.txt', 'r') as f:
+with codecs.open('3xt1.txt', 'r') as f:
     flower3_t = f.readlines()
     flower3_t = [float(item.strip()) for item in flower3_t]
 
 ###f4
-with codecs.open('/Users/liyingqi/Desktop/wzh/x7.txt','r') as f:
+with codecs.open('x7.txt','r') as f:
     flower4_x= f.readlines()
     flower4_x= [float(item.strip()) for item in flower4_x]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/x8.txt', 'r') as f:
+with codecs.open('x8.txt', 'r') as f:
     flower4_y = f.readlines()
     flower4_y = [float(item.strip()) for item in flower4_y]
 
-with codecs.open('/Users/liyingqi/Desktop/wzh/4xt1.txt', 'r') as f:
+with codecs.open('4xt1.txt', 'r') as f:
     flower4_t = f.readlines()
     flower4_t = [float(item.strip()) for item in flower4_t]
 
